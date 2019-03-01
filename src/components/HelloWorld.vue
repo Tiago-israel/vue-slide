@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <b-col sm md="4"  offset-md="4">
     <carousel :paginationEnabled="false" :perPage="1.2">
       <slide v-for="(item, index) in list" :key="index">
         <b-col cols="12">
@@ -17,7 +17,7 @@
         </b-col>
       </slide>
     </carousel>
-  </div>
+  </b-col>
 </template>
 
 <script>
