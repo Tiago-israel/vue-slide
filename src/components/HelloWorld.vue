@@ -1,11 +1,11 @@
 <template>
-  <b-col sm md="4"  offset-md="4">
+  <b-col sm md="4" offset-md="4">
     <carousel :paginationEnabled="false" :perPage="1.2">
       <slide v-for="(item, index) in list" :key="index">
         <b-col cols="12">
           <b-card
             title="Card Title"
-            img-src="https://picsum.photos/600/300/?image=25"
+            :img-src="'https://randomuser.me/api/portraits/men/'+index+'.jpg'"
             img-alt="Image"
             img-top
             tag="article"
@@ -28,7 +28,7 @@ export default {
     msg: String
   },
   data: () => ({
-    list:[1,2,3,4,5,6,7]
+    list: [1, 2, 3, 4, 5, 6, 7]
   }),
   components: {
     Carousel,
